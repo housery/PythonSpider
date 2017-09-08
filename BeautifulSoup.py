@@ -1,5 +1,5 @@
 # -*- coding:utf-8 -*-
-# Beautifulsoup tag name class attributes
+# 利用Beautifulsoup获取网页节点，爬取豆瓣书店的图片
 import urllib
 from bs4 import BeautifulSoup
 
@@ -13,7 +13,7 @@ def get_content(url):
 # 获取图片
 def get_img(content):
     soup = BeautifulSoup(content,"html.parser")
-    carousel = soup.find(class_ ="carousel")
+    carousel = soup.find(class_ ="carousel")         //carousel为豆瓣网站的一个div节点
     imgs = carousel.find_all("img")
 
     x = 1
